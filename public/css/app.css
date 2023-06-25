@@ -2618,3 +2618,7 @@ fieldset:disabled a.btn {
 .alert-dark .alert-link {
     color: #040505;
 }
+
+m-t {
+    margin-top: 1rem;
+}

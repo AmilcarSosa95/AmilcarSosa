@@ -24,7 +24,7 @@ class ProductoTraducciones extends Model
         $productoTraduccion->nombre = $params['nombreEs'];
         $productoTraduccion->descripcion_corta = $params['descripcionCortaEs'];
         $productoTraduccion->descripcion_larga = $params['descripcionLargaEs'];
-        $productoTraduccion->url = $params['urleEs'];
+        $productoTraduccion->url = $params['sku'].'_'.$params['nombreEs'];
         $productoTraduccion->idioma = "es";
 
         $productoTraduccion->save();
@@ -42,7 +42,7 @@ class ProductoTraducciones extends Model
         $productoTraduccion->nombre = $params['nombreEn'];
         $productoTraduccion->descripcion_corta = $params['descripcionCortaEn'];
         $productoTraduccion->descripcion_larga = $params['descripcionLargaEn'];
-        $productoTraduccion->url = $params['urleEn'];
+        $productoTraduccion->url = $params['sku'].'_'.$params['nombreEn'];
         $productoTraduccion->idioma = "en";
 
         $productoTraduccion->save();

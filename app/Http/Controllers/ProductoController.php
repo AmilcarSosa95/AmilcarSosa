@@ -26,27 +26,31 @@ class ProductoController extends Controller
         return view('producto.EditarProducto', ['producto' => $producto]);
     }
 
-    public function detalle($id): View
+    public function detalle($slug): View
     {
-        $producto = Producto::obtenerProductoPorID($id);
+        $producto = Producto::obtenerProductoPorRuta($slug);
         return view('producto.DetalleProducto', ['producto' => $producto]);
+    }
+
+    public function detallePublico($slug): View
+    {
+        $producto = Producto::obtenerProductoPorRuta($slug);
+        return view('producto.DetallePublico', ['producto' => $producto]);
     }
 
     public function guardar(Request $request)
     {
         $this->validate($request, [
             "nombreEs" => 'required',
-            "descripcionCortaEs" => 'required',
-            "descripcionLargaEs" => 'required',
-            "urleEs" => 'required',
+            "descripcionCortaEs" => 'required|max:120',
+            "descripcionLargaEs" => '',
             "nombreEn" => 'required',
-            "descripcionCortaEn" => 'required',
-            "descripcionLargaEn" => 'required',
-            "urleEn" => 'required',
+            "descripcionCortaEn" => 'required|max:120',
+            "descripcionLargaEn" => '',
             "sku" => 'required',
-            "precio_dolares" => 'required',
-            "precio_pesos" => 'required',
-            "puntos" => 'required',
+            "precio_dolares" => 'required|numeric|min:1',
+            "precio_pesos" => 'required|numeric|min:1',
+            "puntos" => 'required|numeric|min:1',
         ]);
 
         Producto::guardarDatos($request->all());
@@ -57,17 +61,15 @@ class ProductoController extends Controller
     {
         $this->validate($request, [
             "nombreEs" => 'required',
-            "descripcionCortaEs" => 'required',
-            "descripcionLargaEs" => 'required',
-            "urleEs" => 'required',
+            "descripcionCortaEs" => 'required|max:120',
+            "descripcionLargaEs" => '',
             "nombreEn" => 'required',
-            "descripcionCortaEn" => 'required',
-            "descripcionLargaEn" => 'required',
-            "urleEn" => 'required',
+            "descripcionCortaEn" => 'required|max:120',
+            "descripcionLargaEn" => '',
             "sku" => 'required',
-            "precio_dolares" => 'required',
-            "precio_pesos" => 'required',
-            "puntos" => 'required',
+            "precio_dolares" => 'required|numeric|min:0',
+            "precio_pesos" => 'required|numeric|min:0',
+            "puntos" => 'required|numeric|min:0',
         ]);
 
         Producto::guardarDatos($request->all());
@@ -84,7 +86,7 @@ class ProductoController extends Controller
 
     public function productos(Request $request)
     {
-        $productos = \App\Models\Producto::obtenerProductos();
+        $productos = \App\Models\Producto::obtenerProductos($request->all());
         return view('producto.productos', ['productos' => $productos]);
     }
 

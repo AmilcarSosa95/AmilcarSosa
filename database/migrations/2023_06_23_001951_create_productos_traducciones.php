@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('nombre');
             $table->string('descripcion_corta');
             $table->string('descripcion_larga');
-            $table->string('url');
+            $table->string('url')->unique();
             $table->string('idioma');
             $table->foreign('id_producto')->references('id')->on('producto');
 

@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Crear producto') }}
+            {!! trans('producto.crear_proyec') !!}
         </h2>
     </x-slot>
 
@@ -26,48 +26,38 @@
 
                             <div class="row-auto">
                                 <div class="col-auto mb-1.5">
-                                    <h1>Español</h1>
+                                    <h1>{!! trans('producto.espaniol') !!}</h1>
                                 </div>
                                 <hr>
                                 <div>
-                                    <label for="nombreEs">Nombre</label>
+                                    <label for="nombreEs">{!! trans('producto.nombre') !!}</label>
                                     <input
                                         style="color: black; width: 100%"
                                         type="text"
                                         id="nombreEs"
                                         name="nombreEs"
                                         value="{{old('nombreEs')}}"
-                                        placeholder="Nombre"/>
+                                        placeholder="{!! trans('producto.nombre') !!}"/>
                                 </div>
                                 <div>
-                                    <label for="descripcionCortaEs">Descripcion corta</label>
+                                    <label for="descripcionCortaEs">{!! trans('producto.desc_corta') !!}</label>
                                     <input
                                         style="color: black; width: 100%"
                                         type="text"
                                         id="descripcionCortaEs"
                                         name="descripcionCortaEs"
                                         value="{{old('descripcionCortaEs')}}"
-                                        placeholder="Descripción corta"/>
+                                        placeholder="{!! trans('producto.desc_corta') !!}"/>
                                 </div>
                                 <div>
-                                    <label for="descripcionLargaEs">Descripcion larga</label>
+                                    <label for="descripcionLargaEs">{!! trans('producto.desc_larga') !!}</label>
                                     <input
                                         style="color: black; width: 100%"
                                         type="text"
                                         id="descripcionLargaEs"
                                         name="descripcionLargaEs"
                                         value="{{old('descripcionLargaEs')}}"
-                                        placeholder="Descripción larga"/>
-                                </div>
-                                <div>
-                                    <label for="urleEs">Url</label>
-                                    <input
-                                        style="color: black; width: 100%"
-                                        type="text"
-                                        id="urleEs"
-                                        name="urleEs"
-                                        value="{{old('urleEs')}}"
-                                        placeholder="Url"/>
+                                        placeholder="{!! trans('producto.desc_larga') !!}"/>
                                 </div>
                             </div>
 
@@ -81,54 +71,40 @@
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900 dark:text-gray-100">
                         <div class="relative mb-3" data-te-input-wrapper-init>
-
-
-
                             <div class="col-auto mb-1.5">
                                 <h1>Ingles</h1>
                             </div>
                             <hr>
                             <div>
-                                <label for="nombreEn">Nombre</label>
+                                <label for="nombreEn">{!! trans('producto.nombre') !!}</label>
                                 <input
                                     style="color: black; width: 100%"
                                     type="text"
                                     id="nombreEn"
                                     name="nombreEn"
                                     value="{{old('nombreEn')}}"
-                                    placeholder="Nombre"/>
+                                    placeholder="{!! trans('producto.nombre') !!}"/>
                             </div>
                             <div>
-                                <label for="descripcionCortaEn">Descripcion corta</label>
+                                <label for="descripcionCortaEn">{!! trans('producto.desc_corta') !!}</label>
                                 <input
                                     style="color: black; width: 100%"
                                     type="text"
                                     id="descripcionCortaEn"
                                     name="descripcionCortaEn"
                                     value="{{old('descripcionCortaEn')}}"
-                                    placeholder="Descripción corta"/>
+                                    placeholder="{!! trans('producto.desc_corta') !!}"/>
                             </div>
                             <div>
-                                <label for="descripcionLargaEn">Descripcion larga</label>
+                                <label for="descripcionLargaEn">{!! trans('producto.desc_larga') !!}</label>
                                 <input
                                     style="color: black; width: 100%"
                                     type="text"
                                     id="descripcionLargaEn"
                                     name="descripcionLargaEn"
                                     value="{{old('descripcionLargaEn')}}"
-                                    placeholder="Descripción larga"/>
+                                    placeholder="{!! trans('producto.desc_larga') !!}"/>
                             </div>
-                            <div>
-                                <label for="urleEn">Url</label>
-                                <input
-                                    style="color: black; width: 100%"
-                                    type="text"
-                                    id="urleEn"
-                                    name="urleEn"
-                                    value="{{old('urleEn')}}"
-                                    placeholder="Url"/>
-                            </div>
-
                         </div>
                     </div>
                 </div>
@@ -141,53 +117,53 @@
                             <div class="row-auto">
                                 <div class="col-auto mb-1.5">
                                     <div>
-                                        <label for="sku">SKU</label>
+                                        <label for="sku">{!! trans('producto.sku') !!}</label>
                                         <input
                                             style="color: black; width: 100%"
                                             type="text"
                                             id="sku"
                                             name="sku"
                                             value="{{old('sku')}}"
-                                            placeholder="sku"/>
+                                            placeholder="{!! trans('producto.sku') !!}"/>
                                     </div>
 
                                 </div>
                                 <div class="col-auto mb-1.5">
                                     <div>
-                                        <label for="precio_dolares">Precio en dolares</label>
+                                        <label for="precio_dolares">{!! trans('producto.precio_d') !!}</label>
                                         <input
                                             style="color: black; width: 100%"
                                             type="number"
                                             id="precio_dolares"
                                             name="precio_dolares"
                                             value="{{old('precio_dolares')}}"
-                                            placeholder="Precio en dolares"/>
+                                            placeholder="{!! trans('producto.precio_d') !!}"/>
                                     </div>
 
                                 </div>
                                 <div class="col-auto mb-1.5">
                                     <div>
-                                        <label for="precio_pesos">Precio en pesos</label>
+                                        <label for="precio_pesos">{!! trans('producto.precio_p') !!}</label>
                                         <input
                                             style="color: black; width: 100%"
                                             type="text"
                                             id="precio_pesos"
                                             name="precio_pesos"
                                             value="{{old('precio_pesos')}}"
-                                            placeholder="Precio en pesos"/>
+                                            placeholder="{!! trans('producto.precio_p') !!}"/>
                                     </div>
 
                                 </div>
                                 <div class="col-auto mb-1.5">
                                     <div>
-                                        <label for="puntos">Puntos</label>
+                                        <label for="puntos">{!! trans('producto.puntos') !!}</label>
                                         <input
                                             style="color: black; width: 100%"
                                             type="number"
                                             id="puntos"
                                             name="puntos"
                                             value="{{old('puntos')}}"
-                                            placeholder="Puntos"/>
+                                            placeholder="{!! trans('producto.puntos') !!}"/>
                                     </div>
 
                                 </div>
@@ -196,8 +172,8 @@
                             <br>
                             <br>
                             <div style="text-align: right">
-                                <a href="{{route('producto.index')}}" class="btn btn-secondary">Cancelar</a>
-                                <button type="submit" class="btn btn-primary">Guardar</button>
+                                <a href="{{route('producto.index')}}" class="btn btn-secondary">{!! trans('producto.cancelar') !!}</a>
+                                <button type="submit" class="btn btn-primary">{!! trans('producto.guardar') !!}</button>
                             </div>
                         </div>
                     </div>

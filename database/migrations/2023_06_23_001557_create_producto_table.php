@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('producto', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('sku');
+            $table->bigInteger('sku')->unique();
             $table->double('precio_dolares');
             $table->double('precio_pesos');
             $table->smallInteger('puntos');

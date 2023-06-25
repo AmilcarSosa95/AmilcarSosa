@@ -20,6 +20,7 @@ Route::get('/', function () {
 
 
 Route::get('/productos',[\App\Http\Controllers\ProductoController::class, 'productos'])->name('menu.productos');
+Route::post('/productos',[\App\Http\Controllers\ProductoController::class, 'productos'])->name('menu.productos');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -38,10 +39,15 @@ Route::middleware('auth')->prefix('admin')->name('producto.')->group(function() 
     Route::patch('/producto/eliminar', [\App\Http\Controllers\ProductoController::class, 'eliminar'])->name('eliminar');
     Route::get('/crear', [\App\Http\Controllers\ProductoController::class, 'crear'])->name('crear');
     Route::get('/editar/{id}', [\App\Http\Controllers\ProductoController::class, 'editar'])->name('editar');
-    Route::get('/detalle/{id}', [\App\Http\Controllers\ProductoController::class, 'detalle'])->name('detalle');
+    Route::get('/{slug}', [\App\Http\Controllers\ProductoController::class, 'detalle'])->name('detalle');
 
 });
 
 Route::post('/cambio', [\App\Http\Controllers\ProductoController::class, 'cambio'])->name('producto.cambio');
 
+
+Route::get('lang/change', [\App\Http\Controllers\LangController::class, 'cambiar'])->name('cambiar.idioma');
+
 require __DIR__.'/auth.php';
+
+Route::get('/{slug}', [\App\Http\Controllers\ProductoController::class, 'detallePublico'])->name('detalle');

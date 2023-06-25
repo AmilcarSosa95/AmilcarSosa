@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-general>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {!! trans('producto.det_product') !!}
@@ -72,19 +72,8 @@
                         <br>
                         <br>
                         <div style="text-align: right">
-                            <a href="{{route('producto.index')}}" class="btn btn-secondary">{!! trans('producto.regresar') !!}</a>
+                            <a href="{{url()->previous() }}" class="btn btn-secondary">{!! trans('producto.regresar') !!}</a>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <div class="relative mb-3" data-te-input-wrapper-init>
-                        <canvas id="myChart" height="100px"></canvas>
-
                     </div>
                 </div>
             </div>
@@ -92,7 +81,7 @@
 
 
     </div>
-</x-app-layout>
+</x-general>
 
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

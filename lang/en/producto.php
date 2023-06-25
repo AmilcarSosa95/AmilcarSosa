@@ -1,0 +1,31 @@
+<?php
+
+return [
+    'admin_productos' => 'Product Management',
+    'productos' => 'Products',
+    'agregar' => 'Add',
+    'sku' => 'SKU',
+    'nombre' => 'Name',
+    'precio_d' => 'Price in dollars',
+    'precio_p' => 'Price in pesos',
+    'puntos' => 'Points',
+    'activos' => 'Assets',
+    'editar' => 'Edit',
+    'eliminar' => 'Delete',
+    'detalle' => 'Detail',
+    'crear_proyec' => 'Create Product',
+    'espaniol' => 'Spanish',
+    'desc_corta' => 'Short description',
+    'desc_larga' => 'Long description',
+    'ingles' => 'English',
+    'cancelar' => 'Cancel',
+    'guardar' => 'Save',
+    'edit_produc' => 'Edit product',
+    'det_product' => 'Product Detail',
+    'inf_produc' => 'Product Information',
+    'regresar' => 'Go back',
+    'msg_eliminar' => 'Do you want to delete the record?',
+    'si' => 'Yes',
+    'no' => 'No',
+    'idioma' => 'Language'
+];
